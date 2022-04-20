@@ -54,8 +54,7 @@ d3.csv("BA (1).csv").then((dt) => {
     let x = d3.scaleTime().range([0, w]).domain(d3.extent(d, (d) => {return d.date}))
     let y = d3.scaleLinear().range([h, 0]).domain([0, d3.max(d, (d) => {return +d.close})])
    // let colorCategory = d3.scale.category10();
-    let cScale = colorbrewer["Set1"][4]
-    let colorScale = d3.scaleOrdinal().range(cScale).domain(['Boeing', "Airbus"])
+    let colorScale = d3.scaleOrdinal().range(["red", "blue"]).domain(['Boeing', "Airbus"])
 
 
 
@@ -154,7 +153,7 @@ d3.csv("BA (1).csv").then((dt) => {
         .datum(d)
         .attr("id", "close")
         .style("fill", "none")
-        .style("stroke", cScale[0])
+        .style("stroke", "red")
         .style("stroke-width", 1.5)
      
         .attr("d", d3.line()
@@ -166,7 +165,7 @@ d3.csv("BA (1).csv").then((dt) => {
         .datum(da)
         .attr("id", "close")
         .style("fill", "none")
-        .style("stroke", cScale[1])
+        .style("stroke", "blue")
         .style("stroke-width", 1.5)
         
         .attr("d", d3.line()
