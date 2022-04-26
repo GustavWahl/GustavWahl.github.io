@@ -21,7 +21,7 @@ d3.csv("avgTmpCities.csv").then((data) => {
             } 
         }
     
-        let svg = d3.select("svg")
+        let svg = d3.select("#whitehat")
         let svg2 = d3.select("#blackhat")
         let w = svg.attr("width") - 200
         let h = svg.attr("height") - 200
