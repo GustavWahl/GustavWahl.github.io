@@ -1,7 +1,7 @@
 d3.csv("florida.csv").then((dt) => {
 
 
-    let svg = d3.select("svg")
+    let svg = d3.select("#florida")
     let w = svg.attr("width") - 200
     let h = svg.attr("height") - 200
 
